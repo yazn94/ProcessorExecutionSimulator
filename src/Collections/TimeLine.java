@@ -1,5 +1,6 @@
-package MainComponents;
+package Collections;
 
+import MainComponents.Clock;
 import MainComponents.Task.Task;
 
 import java.util.ArrayList;

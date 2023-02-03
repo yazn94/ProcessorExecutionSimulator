@@ -1,5 +1,7 @@
-package MainComponents;
+package Collections;
 
+import MainComponents.Clock;
+import MainComponents.Processor;
 import Secondary.ConsoleColors;
 
 import java.util.ArrayList;

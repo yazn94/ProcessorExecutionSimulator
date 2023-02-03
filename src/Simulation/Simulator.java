@@ -1,10 +1,10 @@
 package Simulation;
 
 import MainComponents.Clock;
-import MainComponents.ProcessorsCollection;
+import Collections.ProcessorsCollection;
 import MainComponents.Task.RealTask;
 import MainComponents.Task.Task;
-import MainComponents.TimeLine;
+import Collections.TimeLine;
 import Secondary.Priority;
 import Secondary.Recorder;
 

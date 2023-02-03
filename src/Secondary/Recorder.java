@@ -2,15 +2,15 @@ package Secondary;
 
 import MainComponents.Clock;
 import MainComponents.Processor;
-import MainComponents.ProcessorsCollection;
+import Collections.ProcessorsCollection;
 import MainComponents.Task.Task;
-import MainComponents.TimeLine;
+import Collections.TimeLine;
 
 import java.util.HashMap;
 
 
 public class Recorder {
-    // For each clock cycle id, we store a HashMap of the tasks assigned to each processor.
+    // For each clock cycle, we store a HashMap of the tasks assigned to each processor.
     private final HashMap<Clock, HashMap<Processor, Task>> storedInfo = new HashMap<>();
     private final int processorsNumber;
     private final int totalClockCycles;

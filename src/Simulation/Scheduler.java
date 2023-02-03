@@ -2,7 +2,7 @@ package Simulation;
 
 import MainComponents.Clock;
 import MainComponents.Processor;
-import MainComponents.ProcessorsCollection;
+import Collections.ProcessorsCollection;
 import MainComponents.Task.NullTask;
 import MainComponents.Task.Task;
 import Secondary.Recorder;
