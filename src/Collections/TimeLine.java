@@ -9,18 +9,23 @@ import java.util.NoSuchElementException;
 
 public class TimeLine implements Iterable<Clock> {
     private ArrayList<Clock> clocks = new ArrayList<>();
+    private static TimeLine solo = new TimeLine(); // singleton
 
-    public TimeLine(int numberOfClocks, ArrayList<Task> tasks) {
-        for (int i = 1; i <= numberOfClocks; i++) {
-            clocks.add(new Clock(i));
-        }
+    private TimeLine() {
+    }
 
+    public static TimeLine getInstance() {
+        return solo;
+    }
+
+    public void addTasks(ArrayList<Task> tasks) { // add tasks to the timeline
         for (Task task : tasks) {
             clocks.get(task.getCreationTime() - 1).addTask(task);
         }
-
     }
-
+    public void addClock(Clock clock) {
+        clocks.add(clock);
+    }
     public Clock get(int index) {
         return clocks.get(index);
     }

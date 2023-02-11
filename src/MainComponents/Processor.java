@@ -3,7 +3,6 @@ package MainComponents;
 import MainComponents.Task.NullTask;
 import MainComponents.Task.Task;
 import Secondary.ConsoleColors;
-
 public class Processor {
     private int upcomingAvailability;
     private String id;
@@ -44,4 +43,3 @@ public class Processor {
         return ConsoleColors.BLUE + id + ConsoleColors.RESET;
     }
 }
-

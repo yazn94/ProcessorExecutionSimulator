@@ -29,7 +29,12 @@ public class Simulator {
         scn.close();
 
         readInput(file);
-        timeLine = new TimeLine(totalClockCycles, allTasks);
+        timeLine = TimeLine.getInstance();
+        for (int i = 1; i <= totalClockCycles; i++) {
+            timeLine.addClock(new Clock(i));
+        }
+
+        timeLine.addTasks(allTasks);
         recorder = new Recorder(processorsNumber, totalClockCycles, timeLine);
         scheduler = new Scheduler(recorder);
 
@@ -54,6 +59,9 @@ public class Simulator {
 
         for (int i = 1; i <= tasksNumber; i++) {
             int creationTime = sc.nextInt(), executionTime = sc.nextInt(), priority = sc.nextInt();
+            if (priority != 1 && priority != 0) {
+                throw new IllegalArgumentException("Priority must be 0 or 1");
+            }
             Priority currentPriority = (priority == 1 ? Priority.HIGH : Priority.LOW);
             allTasks.add(new RealTask("T" + i, creationTime, executionTime, currentPriority));
         }

@@ -5,7 +5,7 @@ import Secondary.Priority;
 
 public class NullTask extends Task {
     public NullTask() {
-        super(" X ", 0, 0, Priority.LOW);
+        super(" X", 0, 0, Priority.LOW);
         this.isCompleted = true;
     }
 

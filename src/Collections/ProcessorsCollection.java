@@ -31,7 +31,7 @@ public class ProcessorsCollection implements Iterable<Processor> {
 
     public void printProcessorsState(Clock clock) {
         for (Processor processor : collection) {
-            System.out.print(processor);
+            System.out.print("- " + processor);
             if (processor.isAvailable(clock)) {
                 System.out.println(" has no assigned tasks.");
             } else {
@@ -41,7 +41,6 @@ public class ProcessorsCollection implements Iterable<Processor> {
             }
         }
     }
-
     public void initializeKProcessors(int k) {
         for (int i = 1; i <= k; i++) {
             addProcessor(new Processor("P" + (i)));
@@ -50,12 +49,10 @@ public class ProcessorsCollection implements Iterable<Processor> {
 
     class ProcessorsCollectionIterator implements Iterator<Processor> {
         int index = 0;
-
         @Override
         public boolean hasNext() {
             return index < collection.size();
         }
-
         @Override
         public Processor next() {
             if (!hasNext())
@@ -63,4 +60,6 @@ public class ProcessorsCollection implements Iterable<Processor> {
             return collection.get(index++);
         }
     }
+
+
 }
