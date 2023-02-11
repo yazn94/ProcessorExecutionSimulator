@@ -31,7 +31,8 @@ public class Recorder {
     }
 
     public void print() {
-        System.out.println("This is the final report, it's a timeline that tells what task each processor was working on" +
+        System.out.println("This is the final report, it's a timeline that tells what task " +
+                "\neach processor was working on " +
                 "during each clock cycle : ");
 
         // Print the header row with the clock cycle numbers
